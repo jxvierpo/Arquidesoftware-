@@ -30,6 +30,7 @@ class Acceso:
     def registrar_trabajador(self, id_trabajador):
         status, response = self.send_request("regis", id_trabajador)
         if status == "OK":
+            '''
             print(f"Solicitud de registro para el trabajador {id_trabajador} aceptada.")
             nombre = input("Ingrese el nombre del trabajador: ")
             email = input("Ingrese el email del trabajador: ")
@@ -40,10 +41,14 @@ class Acceso:
 
             data = f"{nombre},{email},{contraseña},{rol_id},{codigo_personal},{QR}"
             status, response = self.send_request("regus", data)
+            '''
+            print(f"Trabajador {id_trabajador} registrado correctamente.")
+            '''
             if status == "OK":
                 print(f"Trabajador {id_trabajador} registrado correctamente.")
             else:
                 print(f"Error al registrar al trabajador {nombre}: {response}")
+            '''
         
         else:
             print(f"Error al solicitar registro para el trabajador {id_trabajador}: {response}")
