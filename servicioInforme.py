@@ -55,7 +55,10 @@ class ServicioInformes:
         return resultados
 
 '''
+Ejemplo de uso
+
 informes = ServicioInformes()
+
 print("Personas ingresadas hoy:", informes.consultar_personas_ingresadas_hoy())
 print("Cantidad de personas en el recinto:", informes.consultar_cantidad_personas_recinto())
 print("Cantidad de personas en el piso 2:", informes.consultar_cantidad_personas_piso(2))
